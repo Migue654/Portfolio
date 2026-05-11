@@ -18,7 +18,7 @@ function Header (){
                     animate={{ opacity: 1, }}
                     whileHover={{scale: 1.05 , boxShadow: "0px 0px 8px rgba(38, 63, 226, 0.5)"}}
                     whileTap={{scale: 0.8 ,y: 2, }}
-                    transition={{type:"spring" , duration: 2}}
+                    transition={{type:"spring" , duration: 3}}
                     onClick={()=>setShowModal(!showModal)}>
                         <p>New Viewer?</p>
                     </motion.button>

@@ -20,7 +20,7 @@ function Projects(){
             initial={{ opacity:0,x:-300}}
             animate={{opacity:1,x:0}}
             transition={{duration:2}}>
-                <div className='ml-15'>
+                <div className='ml-15 bg-black/70 min-width-100 max-w-300 p-5 rounded-4xl'>
                     <div>
                         <h2 className='text-white text-3xl'> Personal React Project </h2>
                     </div>

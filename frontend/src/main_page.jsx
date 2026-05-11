@@ -4,26 +4,31 @@ import DarkModeBut from './darkmode_but.jsx';
 import Header from './header.jsx'
 import BottomLinks from './bottom_links.jsx';
 import Projects from './Projects.jsx';
+import ContactInfo from './contact_info.jsx';
+
+import Profile_Pic from './Profile_pic.jsx';
 // eslint-disable-next-line no-unused-vars
 import {motion} from "motion/react"
 import Typewriter from 'typewriter-effect';
+import { useState } from 'react';
 
 function Main() {
 
+  const [showContact, setShowContact] = useState(false);
 
   return (
 
   <div className=' min-h-screen  text-white '>
     <Header></Header>
     <DarkModeBut />
-    <div className=' mainLay_out grid grid-cols-2'>
+    <div className='mainLay_out grid grid-cols-2'>
       <div >
         <motion.div
         initial={{ opacity: 0, y: -20}}
         animate={{ opacity: 1, y: 0}}
         transition= {{ duration:1.5 , delay: 0.5}}
 
-        className=" mt-72 ml-20 rounded">
+        className=" mt-50 ml-20 rounded">
           <h1 className="text-7xl text-white"> Miguel </h1>
 
         </motion.div>
@@ -52,47 +57,68 @@ function Main() {
           California Polytechnic State University San Luis Obispo
         </motion.div>
 
+        {/*------------------------------------------------------------------------------------------------------------------------*/}
+        <div className='grid mt-5'>
+          <motion.div className="flex flex-row "
+              transition={{ duration: 2, delay: 1.5}}
+          >
+              <motion.button className="bg-blue-500 rounded p-1 w-35  ml-20"
+                  initial={{opacity:0, x:-20}}
+                  animate={{ opacity: 1, x:0}}
+
+                  whileHover={{scale: 1.02, boxShadow: "0px 0px 8px rgba(128, 128, 128, 0.5)"}}
+                  whileTap={{scale: 0.9 ,y: 2, }}
+                  transition={{type:"spring"}}
+                  onClick={()=>setShowContact(!showContact)}>
+                      <p>Contact Me</p>
+                  </motion.button>
+              <motion.button
+                  className="bg-blue-500 rounded p-1 w-35  ml-5"
+                  initial={{opacity:0, x:-20}}
+                  animate={{ opacity: 1, x:0}}
+
+                  whileHover={{scale: 1.02, boxShadow: "0px 0px 8px rgba(38, 63, 226, 0.5)"}}
+                  whileTap={{scale: 0.9 ,y: 2, }}
+                  transition={{type:"spring"}}>
+                      <p>View Resume</p>
+              </motion.button>
+          </motion.div>
+
+
+          <div>
+            {showContact &&
+            <motion.div
+            initial={{opacity:0, x:-20}}
+            animate={{ opacity: 1, x:0}}
+            transition={{duration: 1}}
+            >
+              <ContactInfo/>
+            </motion.div>}
+          </div>
+
+          <BottomLinks></BottomLinks>
+
+
+        </div>
+
+        {/*------------------------------------------------------------------------------------------------------------------------*/}
+
+
       </div>
-      <div className="flex justify-center  items-end mb-20  ">
+
+
+      {/* <div className="flex justify-center  items-end mb-20  ">
         <div className=" bg-amber-900 pl rounded p-25">
           <p>filler spot that idk what to do with </p>
 
         </div>
+      </div> */}
+      <div className="mt-50 ml-50">
+        <Profile_Pic ></Profile_Pic>
       </div>
-    </div>
-
-    <div className='grid'>
-        <motion.div className="flex flex-row "
-            transition={{ duration: 2, delay: 1.5}}
-        >
-            <motion.button className="bg-blue-500 rounded p-1 w-35 mt-5 ml-20"
-                initial={{opacity:0, x:-20}}
-                animate={{ opacity: 1, x:0}}
-
-                whileHover={{scale: 1.02, boxShadow: "0px 0px 8px rgba(128, 128, 128, 0.5)"}}
-                whileTap={{scale: 0.9 ,y: 2, }}
-                transition={{type:"spring"}}>
-                    <p>Contact Me</p>
-                </motion.button>
-            <motion.button
-                className="bg-blue-500 rounded p-1 w-35 mt-5 ml-5"
-                initial={{opacity:0, x:-20}}
-                animate={{ opacity: 1, x:0}}
-
-                whileHover={{scale: 1.02, boxShadow: "0px 0px 8px rgba(38, 63, 226, 0.5)"}}
-                whileTap={{scale: 0.9 ,y: 2, }}
-                transition={{type:"spring"}}>
-                    <p>View Resume</p>
-            </motion.button>
-        </motion.div>
-
-
-        <BottomLinks></BottomLinks>
 
 
     </div>
-
-
 
   </div>
   );

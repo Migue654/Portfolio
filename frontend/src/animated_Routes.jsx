@@ -3,9 +3,9 @@ import { Routes, Route, useLocation } from "react-router";
 // eslint-disable-next-line no-unused-vars
 import { AnimatePresence, motion } from "framer-motion";
 
-import Main from "./main_page";
-import About from "./About_me";
-import Projects from "./Projects";
+import Main from "./main_page.jsx";
+import About from "./About_me.jsx";
+import Projects from "./Projects.jsx";
 import New_viewer from "./New_viewer";
 import Experience from "./experience.jsx"
 

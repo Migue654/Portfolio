@@ -36,12 +36,13 @@ function App(){
       edgeFadeWidth={0.01}
       colorCycleSpeed={10}
       brightness={0.5}
-      color1="#0008EB"
-      color2="#174896"
-      color3="#b61111"
-      color4="#FFFFFF"
+      color1="#0008EB" //0008EB
+      color2="#174896" //174896
+      color3="#b61111" //b61111
+      color4="#FFFFFF" //
       enableMouseInteraction
       mouseInfluence={1}
+
     />
 
     </div>
