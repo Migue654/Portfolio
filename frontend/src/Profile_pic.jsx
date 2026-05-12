@@ -6,8 +6,8 @@ function Profile_Pic(){
     return(
 
 <TiltedCard
-  imageSrc="/public/Linkedin_me.JPG"
-  altText="Kendrick Lamar - GNX Album Cover"
+  imageSrc="/Portfolio/public/Linkedin_me.JPG"
+  altText="Miguel-Medina"
   captionText=""
   containerHeight="400px"
   containerWidth="400px"
@@ -28,5 +28,3 @@ function Profile_Pic(){
 }
 
 export default Profile_Pic;
-
-//  I was looking into how much id pay and whatnot but i could'nt find the fees and everything, and I just wanted to ask you what fees you pay and yea for that apartment just so i can have an idea

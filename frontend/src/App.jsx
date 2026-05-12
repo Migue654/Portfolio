@@ -1,7 +1,4 @@
-import Main from "./main_page";
-import About from "./About_me";
-import { BrowserRouter, Routes } from "react-router";
-import Projects from "./Projects";
+
 import AnimatedRoutes from "./animated_Routes";
 import LightPillar from './Light_Piller.jsx';
 import LineWaves from './Line_waves.jsx';
@@ -26,7 +23,7 @@ function App(){
         />
       </div> */}
 
-    <div style={{ position: 'fixed', inset: 0, zIndex: 0 }}>
+    <div style={{ position: 'fixed', inset: 0, zIndex: -1 }}>
     <LineWaves
       speed={0.07}
       innerLineCount={20}
@@ -48,7 +45,7 @@ function App(){
     </div>
 
 
-       <div style={{ position: 'relative', zIndex: 0, background: 'transparent' }}>
+       <div style={{ position: 'relative', zIndex: 5, background: 'transparent' }}>
         <AnimatedRoutes />
       </div>
     </>
